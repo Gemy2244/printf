@@ -2,7 +2,7 @@
 
 /**
 * iTOs - function that converts an int to a string
-* @n: integer to be converted 
+* @n: integer to be converted
 * Return: the buffer pointer
 */
 char *iTOs(int n)
@@ -16,7 +16,7 @@ int sign = n;
         return NULL;
     }
 
-    
+
 
     if (n < 0)
     {
@@ -44,7 +44,7 @@ int sign = n;
 
 /**
 * reverser - function that reverses a string
-* @length: integer to be converted 
+* @length: integer to be converted
 * @string: string to be reversed
 * Return: void
 */
@@ -55,7 +55,7 @@ void reverser(char *string, int length)
     char *ending = string + length - 1;
 
     char temporarychar;
-    
+
     while (starting < ending)
     {
         temporarychar = *starting;
@@ -68,27 +68,27 @@ void reverser(char *string, int length)
 
 /**
 * inTObinary - function that converts an int to a string
-* @n: integer to be converted 
+* @n: integer to be converted
 * Return: the buffer pointer
 */
 char *inTObinary(unsigned int n)
 {
-int index = 0; 
+int index = 0;
     char *newstring = malloc(sizeof(char) * 33);
     if (newstring== NULL)
     {
         return NULL;
     }
- 
-     
-     do 
-     { 
-         newstring[index++] = (n & 1) + '0'; 
-         n >>= 1; 
-     } while (n > 0); 
-     newstring[index] = '\0'; 
-     reverser(newstring, index); 
-     return newstring; 
+
+
+     do
+     {
+         newstring[index++] = (n & 1) + '0';
+         n >>= 1;
+     } while (n > 0);
+     newstring[index] = '\0';
+     reverser(newstring, index);
+     return newstring;
 }
 
 /**
@@ -102,6 +102,13 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+
+/**
+* _strlen - calculates the length of a string
+* @string: the string to be lengthed
+*
+* Return: length of the string
+*/
 unsigned int _strlen(const char *string) {
 
 unsigned int length = 0;
