@@ -23,6 +23,7 @@ int _printf(const char *format, ...)
 				case 'c':
 					{
 						char c = (char)va_arg(args, int);
+
 						_putchar(c);
 						total++;
 						break;
@@ -30,6 +31,7 @@ int _printf(const char *format, ...)
 				case 's':
 					{
 						char *string = va_arg(args, char *);
+
 						write(1, string, _strlen(string));
 						total += _strlen(string);
 						break;
@@ -45,6 +47,7 @@ int _printf(const char *format, ...)
 					{
 						int dintiger = va_arg(args, int);
 						char *string = iTOs(dintiger);
+
 						write(1, string, _strlen(string));
 						total += _strlen(string);
 						free(string);
@@ -54,6 +57,7 @@ int _printf(const char *format, ...)
 					{
 						unsigned int bUnsigned = va_arg(args, unsigned int);
 						char *string = inTObinary(bUnsigned);
+
 						write(1, string, _strlen(string));
 						total += _strlen(string);
 						free(string);
@@ -78,5 +82,5 @@ int _printf(const char *format, ...)
 
 	va_end(args);
 
-	return total;
+	return (total);
 }
