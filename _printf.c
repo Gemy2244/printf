@@ -9,10 +9,10 @@ int _printf(const char *format, ...)
 {
 	int total = 0;
 	va_list args;
+	const char *pointerToCharacter = format;
 
 	va_start(args, format);
 
-	const char *pointerToCharacter = format;
 	while (*pointerToCharacter != '\0')
 	{
 		if (*pointerToCharacter == '%')
